@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "MyriadPro";
+    src: url("../fonts/MyriadPro-Regular.otf");
+}
+
+@font-face {
+    font-family: "MyriadVariableConcept";
+    src: url("../fonts/MyriadVariableConcept-Roman_2.otf");
+}
+
+:root{
+/* fonts */
+--myriadPro: "MyriadPro";
+--myriadVar: "MyriadVariableConcept";
+/* colors */
+    /* Basic */
+--white: #ffffff;
+--lightGrey: #E0E0E0;
+--grey: #9E9E9E;
+--darkGrey: #404040;
+--black: #000000;
+    /* Primary */
+--red: #cd3739;
+--yellow: #fcbf49;
+--paleYellow: #eae2b7;
+--lightBlue: #00BDFF;
+--greyishBlue: #586B7C;
+--darkBlue1: #334659;
+--darkBlue2: #233544;
+--darkBlue3: #2E465B;
+    /* Secondary */
+--orange: #f77f00;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--myriadPro);
+    color: var(--black);
+}
+
+main{
+    background-image: url("assets/img/pictures/background/bg2.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+}
+/* Common Classes */
+    /* Background Color */
+.blue-bg{background-color: var(--darkBlue1);}
+.darkBlue-bg{background-color: var(--darkBlue2);}
+.red-bg{background-color: var(--red);}
+.grey-bg{background-color: var(--grey);}
+.lightGrey-bg{background-color: var(--lightGrey);}
+    /* Color */
+.black-txt{color: var(--black);}
+.grey-txt{color: var(--grey);}
+.lightGrey-txt{color: var(--lightBlue);}
+.red-txt{color: var(--red);}
+.blue-txt{color: var(--darkBlue1);}
