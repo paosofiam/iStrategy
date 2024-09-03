@@ -45,16 +45,76 @@ main{
     background-size: contain;
     background-repeat: repeat;
 }
-/* Common Classes */
+/* Skin Classes */
     /* Background Color */
 .blue-bg{background-color: var(--darkBlue1);}
 .darkBlue-bg{background-color: var(--darkBlue2);}
 .red-bg{background-color: var(--red);}
 .grey-bg{background-color: var(--grey);}
 .lightGrey-bg{background-color: var(--lightGrey);}
-    /* Color */
+    /* Text Color */
 .black-txt{color: var(--black);}
 .grey-txt{color: var(--grey);}
 .lightGrey-txt{color: var(--lightBlue);}
 .red-txt{color: var(--red);}
 .blue-txt{color: var(--darkBlue1);}
+    /* Display */
+        /* Inherit */
+.disp-inh{
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    grid-template-columns: inherit;
+    grid-template-rows: inherit;
+    grid-gap: inherit;
+}
+        /* Flex & Direction */
+.flx-col, .flx-col-s-s, .flx-col-c-s, .flx-col-e-s, .flx-col-s-c, .flx-col-c-c, .flx-col-e-c, .flx-col-s-e, .flx-col-c-e, .flx-col-e-e, .flx-col-s-sb, .flx-col-c-sb, .flx-col-e-sb, .flx-col-s-sa, .flx-col-c-sa, .flx-col-e-sa, .flx-col-s-se, .flx-col-c-se, .flx-col-e-se{
+    display: flex;
+    flex-direction: column;
+}
+.flx-row, .flx-row-s-s, .flx-row-c-s, .flx-row-e-s, .flx-row-s-c, .flx-row-c-c, .flx-row-e-c, .flx-row-s-e, .flx-row-c-e, .flx-row-e-e, .flx-row-s-sb, .flx-row-c-sb, .flx-row-e-sb, .flx-row-s-sa, .flx-row-c-sa, .flx-row-e-sa, .flx-row-s-se, .flx-row-c-se, .flx-row-e-se{
+    display: flex;
+    flex-direction: row;
+}
+        /* Align Items */
+.flx-col-s-s, .flx-col-s-c, .flx-col-s-e, .flx-col-s-sb, .flx-col-s-sa, .flx-col-s-se, .flx-row-s-s, .flx-row-s-c, .flx-row-s-e, .flx-row-s-sb, .flx-row-s-sa, .flx-row-s-se{
+    align-items: start;
+}
+.flx-col-c-s, .flx-col-c-c, .flx-col-c-e, .flx-col-c-sb, .flx-col-c-sa, .flx-col-c-se, .flx-row-c-s, .flx-row-c-c, .flx-row-c-e, .flx-row-c-sb, .flx-row-c-sa, .flx-row-c-se{
+    align-items: center;
+}
+.flx-col-e-s, .flx-col-e-c, .flx-col-e-e, .flx-col-e-sb, .flx-col-e-sa, .flx-col-e-se, .flx-row-e-s, .flx-row-e-c, .flx-row-e-e, .flx-row-e-sb, .flx-row-e-sa, .flx-row-e-se{
+    align-items: end;
+}
+        /* Justify Content */
+.flx-col-s-s, .flx-col-c-s, .flx-col-e-s, .flx-row-s-s, .flx-row-c-s, .flx-row-e-s{justify-content: start;}
+.flx-col-s-c, .flx-col-c-c, .flx-col-e-c, .flx-row-s-c, .flx-row-c-c, .flx-row-e-c{justify-content: center;}
+.flx-col-s-e, .flx-col-c-e, .flx-col-e-e, .flx-row-s-e, .flx-row-c-e, .flx-row-e-e{justify-content: end;}
+.flx-col-s-sb, .flx-col-c-sb, .flx-col-e-sb, .flx-row-s-sb, .flx-row-c-sb, .flx-row-e-sb{justify-content: space-between;}
+.flx-col-s-sa, .flx-col-c-sa, .flx-col-e-sa, .flx-row-s-sa, .flx-row-c-sa, .flx-row-e-sa{justify-content: space-around;}
+.flx-col-s-se, .flx-col-c-se, .flx-col-e-se, .flx-row-s-se, .flx-row-c-se, .flx-row-e-se{justify-content: space-evenly;}
+    /* Grid */
+.grd-2{
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+    /* Common Components */
+        /* Hero */
+.hero{
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__bg{
+    height: auto;
+    width: 100%;
+}
+
+.hero__fg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
