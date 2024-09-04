@@ -1,5 +1,7 @@
 <?php
 
+require_once "app/controller.php";
+
 $_GET = json_decode(file_get_contents('php://input'),true);
 
 if($_GET['ID']){

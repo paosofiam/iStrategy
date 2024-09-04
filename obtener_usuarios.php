@@ -1,10 +1,7 @@
 <?php
 
-/* use App\Controllers\usersController;
-use App\Enums\IncomeTypeEnum;
-use App\Enums\PaymentMethodEnum; */
+require_once "app/controller.php";
 
-/* require("vendor/autoload.php"); */
 $_GET = json_decode(file_get_contents('php://input'),true);
 
 if($_GET['info']){
