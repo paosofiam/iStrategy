@@ -19,6 +19,7 @@
     </title>
     <link rel="stylesheet" href="assets/styles/config.css">
     <link rel="stylesheet" href="assets/styles/general.css">
+    
 </head>
 <body>
     <?php if (true) : ?>
@@ -131,6 +132,8 @@
             <button type="button" onclick="validateSesion()">Iniciar Sesión</button>
         </form>
     <?php endif; ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/requests.js"></script>
     <script src="assets/js/validations.js"></script>
 </body>
 </html>
