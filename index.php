@@ -73,33 +73,33 @@
             <form class="grey-bg" action="">
                 <label for="">
                     <span>Nombre de Usuario</span>
-                    <input type="text" name="" id="" placeholder="Ingrese su Nombre de Usuario">
+                    <input type="text" name="" id="form-input-username" placeholder="Ingrese su Nombre de Usuario">
                 </label>
                 <label for="">
                     <span>Dirección de Correo</span>
-                    <input type="email" name="" id="" placeholder="Ingrese su Email">
+                    <input type="email" name="" id="form-input-email" placeholder="Ingrese su Email">
                 </label>
                 <label for="">
                     <span>Contraseña</span>
-                    <input type="email" name="" id="" placeholder="Ingrese su Contraseña">
+                    <input type="email" name="" id="form-input-password1" placeholder="Ingrese su Contraseña">
                 </label>
                 <label for="">
                     <span>Confirmar Contraseña</span>
-                    <input type="email" name="" id="" placeholder="Ingrese su Contraseña de nuevo">
+                    <input type="email" name="" id="form-input-password2" placeholder="Ingrese su Contraseña de nuevo">
                 </label>
                 <div>
                     <span>Género</span>
                     <label for="">
-                        <input type="radio" name="Masculino" id="" value="Masculino">
+                        <input type="radio" name="form-input-gender" id="" value="Masculino">
                         <span>Masculino</span>
                     </label>
                     <label for="">
-                        <input type="radio" name="Femenino" id="" value="Femenino">
+                        <input type="radio" name="form-input-gender" id="" value="Femenino">
                         <span>Femenino</span>
                     </label>
                 </div>
                 <label for="">
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="" id="form-input-remember">
                     <span>Recordarme Siempre</span>
                 </label>
                 <div>
@@ -118,18 +118,19 @@
             <h1>Ingresa tus datos a continuación</h1>
             <label for="">
                 <span>Correo Electrónico</span>
-                <input type="email" name="" id="" placeholder="Ingrese el Correo">
+                <input type="email" name="" id="login-username" placeholder="Ingrese el Correo">
             </label>
             <label for="">
                 <span>Contraseña</span>
-                <input type="email" name="" id="" placeholder="Introduzca Contraseña">
+                <input type="email" name="" id="login-password" placeholder="Introduzca Contraseña">
             </label>
             <label for="">
-                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="login-remember">
                 <span>Mantenme Conectado</span>
             </label>
             <button type="button" onclick="validateSesion()">Iniciar Sesión</button>
         </form>
     <?php endif; ?>
+    <script src="assets/js/validations.js"></script>
 </body>
 </html>
