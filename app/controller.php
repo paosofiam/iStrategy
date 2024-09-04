@@ -1,15 +1,13 @@
 <?php
 
-/* namespace App\Controllers; */
-
-use Database\MySQLi\Connection;
+require_once 'connection.php';
 
 class usersController {
 
     private $connection;
 
     public function __construct(){
-        $this->connection=Connection::getInstance()->get_database_instance();
+        $this->connection=connection::getInstance()->get_database_instance();
     }
 
     public function index(){//Shows the list with all items
@@ -17,7 +15,7 @@ class usersController {
         $stmt->execute();
         $results = $stmt->fetchAll();
 
-        var_dump($results);
+        return $results;
     }
 
     public function store($data){//Saves the new item in the db
@@ -25,13 +23,13 @@ class usersController {
         $stmt->execute($data);
     }
 
-    /* public function show($id){//Shows a single item
+    public function show($id){//Shows a single item
         $stmt = $this->connection->prepare("SELECT*FROM users WHERE ID=:id");
         $stmt->execute([":id" => $id]);
         $result = $stmt->fetch();
 
-        var_dump($result);
-    } */
+        return $result;
+    }
 
     public function update($data,$id){//Updates a specific item
         $stmt = $this->connection->prepare("UPDATE users SET 

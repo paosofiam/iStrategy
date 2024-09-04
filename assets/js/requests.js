@@ -31,9 +31,16 @@ function del(id){
         });
 }
 
-/* function get(id){
-
-} */
+function get(id){
+    $.ajax({
+        method: "GET",
+        url: "obtener_usuario.php",
+        data: { ID: id }
+    })
+        .done(function( response ) {
+            console.log(response);
+        });
+}
 
 function edit(data){
     $.ajax({
