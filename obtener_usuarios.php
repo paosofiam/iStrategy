@@ -5,16 +5,10 @@ use App\Enums\IncomeTypeEnum;
 use App\Enums\PaymentMethodEnum; */
 
 /* require("vendor/autoload.php"); */
+$_GET = json_decode(file_get_contents('php://input'),true);
 
-$users_controller = new usersController();
-/* $data = array(
-    "payment_method" => PaymentMethodEnum::BankAccount->value,
-    "type" => IncomeTypeEnum::Salary->value,
-    "date" => date("Y-m-d H:i:s"),
-    "amount" => 123456,
-    "description" => "music! 2"
-); */
-
-
-
-$users_controller->index();
+if($_GET['data']){
+    $users_controller = new usersController();
+    $response = $users_controller->index();
+    echo json_encode($response);
+}

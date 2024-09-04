@@ -21,7 +21,7 @@ class Connection{
 
     private function make_connection(){
         $server = "127.0.0.1:3307";
-        $database = "purephp";
+        $database = "istrategy";
         $username = "root";
         $password = "";
 
