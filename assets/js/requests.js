@@ -19,6 +19,7 @@ function add(data){
     })
         .done(function( response ) {
             console.log(response);
+            window.location.reload();
         });
 }
 
@@ -31,6 +32,7 @@ function del(id){
     })
         .done(function( response ) {
             console.log(response);
+            window.location.reload();
         });
 }
 
@@ -57,6 +59,7 @@ function edit(data,id){
     })
         .done(function( response ) {
             console.log(response);
+            window.location.reload();
         });
 }
 

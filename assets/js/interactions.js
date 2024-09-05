@@ -10,7 +10,7 @@ let formSubmit = document.getElementById('form-button-submit');
 function printUsers(data){
     var theString = '';
     data.forEach(user => {
-        theString = theString + '<tr id="row-table-template"><td>'+user.ID+'</td><td>'+user.username+'</td><td>'+user.email+'</td><td>'+user.gender+'</td><td class="flx-row-c-se"><button class="flx-col-c-c" type="button" onclick="edit('+user.ID+')"><img src="assets/img/icons/ui/pen.png" alt="Edit" height="24px" width="auto"></button><button class="flx-col-c-c" type="button" onclick="remove('+user.ID+')"><img src="assets/img/icons/ui/trash-can.png" alt="Delete" height="24px" width="auto"></button></td></tr>'
+        theString = theString + '<tr id="row-table-template"><td>'+user.ID+'</td><td>'+user.username+'</td><td>'+user.email+'</td><td>'+user.gender+'</td><td class="flx-row-c-se"><button class="flx-col-c-c" type="button" onclick="editForm('+user.ID+')"><img src="assets/img/icons/ui/pen.png" alt="Edit" height="24px" width="auto"></button><button class="flx-col-c-c" type="button" onclick="remove('+user.ID+')"><img src="assets/img/icons/ui/trash-can.png" alt="Delete" height="24px" width="auto"></button></td></tr>'
     });
     document.getElementById('dynamic-table').innerHTML = theString;
 }
@@ -29,7 +29,7 @@ function printForm(data){
     if(data.remember == true){
         formRemember.checked = true;
     }
-    formSubmit.setAttribute('onclick','readForm('+data.id+')')
+    formSubmit.setAttribute('onclick','readForm('+data.ID+')')
 }
 
 function clearForm(){
@@ -51,4 +51,25 @@ function toggleElement(id,display){
     else{
         element.style.display = display;
     }
+}
+
+function openForm(){
+    toggleElement('seccion_tabla','block');
+    toggleElement('seccion_registrar','block');
+}
+
+function closeForm(){
+    toggleElement('seccion_tabla','block');
+    toggleElement('seccion_registrar','block');
+    clearForm();
+}
+
+function editForm(id){
+    get(id);
+    toggleElement('seccion_tabla','block');
+    toggleElement('seccion_registrar','block');
+}
+
+function remove(id){
+    del(id);
 }

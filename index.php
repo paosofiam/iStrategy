@@ -26,8 +26,7 @@
 </head>
 <body>
     <?php if (true) : ?>
-        <?php if (true) : ?>
-            <div id="seccion_tabla" class="blue-bg">
+            <div id="seccion_tabla" class="blue-bg" >
                 <main>
                     <aside class="cajaAside noClick">
                         <nav class="mt-md-5 mb-md-5">
@@ -37,7 +36,7 @@
                             </button> 
                         </nav>
                         <div class="caja-menu mt-5">
-                            <button type="button" onclick="add()">Agregar Nuevo Contacto</button>
+                            <button type="button" onclick="openForm()">Agregar Nuevo Contacto</button>
                             <hr>
                             <ul class="etiquetas">
                                 <li>EJEMPLO 1</li>
@@ -71,8 +70,7 @@
                     </div>
                 </main>
             </div>
-        <?php else : ?>
-            <div id="seccion_registrar" class="blue-bg">
+            <div id="seccion_registrar" class="blue-bg" style="display: none;">
                 <main>
                     <aside class="cajaAside">
                         <img src="assets/img/icons/iso/paper-plane.png" class="logotipoAside" alt="iStrategy" width="35">
@@ -134,8 +132,8 @@
                                     <span>Recordarme Siempre</span>
                                 </label>
                                 <div class="caja-buttons">
-                                    <button class="enviar" type="button" onclick="submit()">Enviar</button>
-                                    <button class="cancelar" type="button" onclick="cancel()">Cancelar</button>
+                                    <button id="form-button-submit" class="enviar" type="button" onclick="readForm(0)">Enviar</button>
+                                    <button class="cancelar" type="button" onclick="closeForm()">Cancelar</button>
                                 </div>
                             </form>
                             <div class="hero">
@@ -153,7 +151,6 @@
                     </div>
                 </main>
             </div>
-        <?php endif; ?>
     <?php else : ?>
         <div id="iniciar_sesion">
             <div class="contenedor">
