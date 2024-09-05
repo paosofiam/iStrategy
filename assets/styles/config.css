@@ -40,11 +40,11 @@
     color: var(--black);
 }
 
-main{
-    background-image: url("assets/img/pictures/background/bg2.jpg");
-    background-size: contain;
-    background-repeat: repeat;
+button{
+    background: none;
+    border: none;
 }
+
 /* Skin Classes */
     /* Background Color */
 .blue-bg{background-color: var(--darkBlue1);}

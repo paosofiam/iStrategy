@@ -10,7 +10,7 @@ let formSubmit = document.getElementById('form-button-submit');
 function printUsers(data){
     var theString = '';
     data.forEach(user => {
-        theString = theString + '<tr id="row-table-template"><td>'+user.ID+'</td><td>'+user.username+'</td><td>'+user.email+'</td><td>'+user.gender+'</td><td><button type="button" onclick="edit('+user.ID+')"><img src="" alt=""></button><button type="button" onclick="remove('+user.ID+')"><img src="" alt=""></button></td></tr>'
+        theString = theString + '<tr id="row-table-template"><td>'+user.ID+'</td><td>'+user.username+'</td><td>'+user.email+'</td><td>'+user.gender+'</td><td class="flx-row-c-se"><button class="flx-col-c-c" type="button" onclick="edit('+user.ID+')"><img src="assets/img/icons/ui/pen.png" alt="Edit" height="24px" width="auto"></button><button class="flx-col-c-c" type="button" onclick="remove('+user.ID+')"><img src="assets/img/icons/ui/trash-can.png" alt="Delete" height="24px" width="auto"></button></td></tr>'
     });
     document.getElementById('dynamic-table').innerHTML = theString;
 }

@@ -1,3 +1,664 @@
-.login__input{
+.login__input {
     background-color: var(--darkBlue1);
+}
+
+#iniciar_sesion {
+    background-image: url("../img/pictures/background/bg1.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+#iniciar_sesion .contenedor {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#iniciar_sesion .logotipo {
+    margin: 0 auto;
+}
+
+#iniciar_sesion h1 {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 48px;
+    letter-spacing: 1px;
+}
+
+#iniciar_sesion h2.subtitulo {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 48px;
+    letter-spacing: 1px;
+}
+
+#iniciar_sesion form {
+    max-width: 750px;
+}
+
+#iniciar_sesion form label span {
+    font-size: 20px;
+}
+
+#iniciar_sesion input[type="email"],
+#iniciar_sesion input[type="password"] {
+    padding: 12px 16px;
+    font-size: 18px;
+    color: var(--lightGrey);
+    display: flex;
+    width: 100%;
+}
+
+#iniciar_sesion input[type="email"]::placeholder,
+#iniciar_sesion input[type="password"]::placeholder {
+    color: var(--grey);
+}
+
+#iniciar_sesion .mycheck {
+    cursor: pointer;
+    background-color: var(--darkBlue1);
+    width: 28px;
+    height: 28px;
+    appearance: none;
+    border: 2px solid #888;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+#iniciar_sesion .mycheck:checked {
+    background-color: var(--darkBlue1);
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+  }
+
+#iniciar_sesion .mycheck:focus {
+    border-color: var(--darkBlue1);
+}
+
+#iniciar_sesion form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 18px;
+    border: none;
+    font-size: 20px;
+}
+
+#iniciar_sesion form button:hover {
+    background-color: var(--white);
+    color: var(--red);
+}
+
+#seccion_tabla {
+    width: 100vw;
+    height: 100vh;
+}
+
+#seccion_tabla main {
+    display: flex;
+    flex-direction: row;
+}
+
+#seccion_tabla .cajaAside {
+    max-width: 250px;
+    max-height: 1250px;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/pictures/background/main2.png");
+    padding: 20px;
+}
+
+#seccion_tabla .cajaTabla {
+    width: 100%;
+    padding: 0 20px;
+}
+
+#seccion_tabla #tablaDatos{
+    width: 100%;
+    background-color: var(--white);
+    color: var(--white);
+    border-collapse: collapse;
+}
+
+#seccion_tabla #tablaDatos thead{
+    background-color: var(--red);
+}
+
+#seccion_tabla #tablaDatos thead tr td {
+    border: 1px solid var(--darkBlue1);
+}
+
+#seccion_tabla #tablaDatos thead tr td span{
+    color: var(--white);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#seccion_tabla #tablaDatos_wrapper div.dt-length label {
+    color: var(--white);
+    margin-left: 10px;
+}
+
+#seccion_tabla #tablaDatos_wrapper div.dt-search input {
+    color: var(--white);
+    font-family: var(--myriadPro);
+}
+
+#seccion_tabla #tablaDatos_wrapper div.dt-length select {
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    color: var(--white);
+}
+
+#seccion_tabla #tablaDatos_wrapper .dt-search label {
+    color: var(--white);
+    margin-right: 10px;
+}
+
+#seccion_tabla #tablaDatos_wrapper .dt-paging nav {
+    color: var(--white);
+}
+
+#seccion_tabla #tablaDatos_wrapper .dt-paging nav button{
+    border: none;
+    background-color: var(--red);
+    color: var(--white) !important;
+}
+
+#seccion_tabla #tablaDatos_wrapper .dt-paging nav button:hover{
+    background-color: var(--white);
+    color: var(--red) !important;
+}
+
+#seccion_tabla #tablaDatos_info {
+    color: var(--white);
+}
+
+#seccion_tabla .banner {
+    position: relative;
+}
+
+#seccion_tabla .banner img {
+    position: absolute;
+    margin-top: 3rem;
+    z-index: 0;
+}
+
+#seccion_tabla .cajaAside nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#seccion_tabla .cajaAside hr {
+    height: 2px;
+    color: var(--lightGrey);
+}
+
+#seccion_tabla .cajaAside ul.etiquetas {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#seccion_tabla .cajaAside ul.etiquetas li {
+    background-color: var(--grey);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+}
+
+#seccion_tabla .cajaAside ul.etiquetas li:hover{
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+#seccion_tabla .cajaAside button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 10px 10px;
+    border-radius: 18px;
+    border: none;
+    font-size: 15px;
+    width: 100%;
+}
+
+#seccion_tabla .cajaAside button:hover {
+    background-color: var(--white);
+    color: var(--red);
+}
+
+#seccion_tabla .cajaAside #button_menu {
+    background-color: transparent;
+    border: none;
+    pointer-events: none;
+}
+
+#seccion_registrar {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/pictures/background/bg2.jpg");
+    background-size: contain;
+}
+
+#seccion_registrar main {
+    display: flex;
+    flex-direction: row;
+}
+
+#seccion_registrar .cajaAside {
+    width: 80px;
+    text-align: center;
+    padding: 30px 0;
+    background-color: var(--darkBlue1);
+    height: 100vh;
+}
+
+#seccion_registrar .cajaAside .caja-menu{
+    position: absolute;
+    bottom: 0;
+}
+
+#seccion_registrar .cajaAside .caja-menu img {
+    width: 30px;
+}
+
+#seccion_registrar .cajaAside .caja-menu ul.redes-sociales {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+#seccion_registrar .cajaAside .caja-menu ul.redes-sociales li {
+    margin-bottom: 1rem;
+}
+
+#seccion_registrar .cajaTabla {
+    width: 100%;
+    padding: 20px;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.42);
+    background-color: var(--lightGrey);
+    border-radius: 10px;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form {
+    width: 50%;
+    padding: 30px 50px;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label .icon-input{
+    background-color: var(--darkBlue1);
+    padding: 5px;
+    border-radius: 8px;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label .icon-input img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label .icon-input input[type="text"],
+#seccion_registrar .cajaTabla .caja-registrar form label .icon-input input[type="email"],
+#seccion_registrar .cajaTabla .caja-registrar form label .icon-input input[type="password"]{
+    background-color: var(--darkBlue1);
+    border: none;
+    display: flex;
+    width: 100%;
+    border-left: 2px solid var(--red);
+    padding: 2px 16px;
+    margin: 2px 0;
+    color: var(--white);
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label .icon-input input:focus-visible {
+    outline: none;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar .genero span{
+    padding-top:10px ;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label.radio-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label.radio-inputs .inp-radio {
+    position: relative;
+    height: 18px;
+    width: 18px;
+    border: none;
+    margin-right: 10px;
+    border: none;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label.radio-inputs input[type=radio].inp-radio:checked,
+#seccion_registrar .cajaTabla .caja-registrar form label.radio-inputs input[type=checkbox].inp-radio:checked{
+    appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label.radio-inputs input[type=radio].inp-radio::after{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: var(--lightGrey);
+    background-size: cover;
+    border: 2px solid var(--grey);
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label.radio-inputs input[type=radio].inp-radio:checked::after{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: var(--darkBlue1);
+    background-size: cover;
+    border: 2px solid var(--grey);
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label.radio-inputs input[type=checkbox].inp-radio:checked::after{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 18px;
+    width: 18px;
+    background-color: var(--darkBlue1);
+    background-size: cover;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label.radio-inputs input[type=checkbox].inp-radio::after{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 18px;
+    width: 18px;
+    background-color: var(--lightGrey);
+    background-size: cover;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.423);
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label.radio-inputs input[type=checkbox].inp-radio:checked::after{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 18px;
+    width: 18px;
+    background-color: var(--darkBlue1);
+    background-size: cover;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form label span{
+    font-weight: bold;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form .caja-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form .caja-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    width: 20%;
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form .caja-buttons button.enviar {
+    background-color: var(--darkBlue1);
+    color: var(--white);
+}
+
+#seccion_registrar .cajaTabla .caja-registrar form .caja-buttons button.cancelar {
+    background-color: var(--lightGrey);
+    color: var(--darkGrey);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.423);
+}
+
+#seccion_registrar .cajaTabla .caja-registrar .hero{
+    width: 50%;
+    border-radius: 0 10px 10px 0;
+}
+
+#seccion_registrar .nav-movil {
+    display: none;
+}
+
+#seccion_registrar .footer-movil {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    #seccion_registrar .cajaTabla .caja-registrar {
+        width: 800px;
+        margin: auto;
+    }
+
+    #seccion_registrar .cajaTabla {
+        display: flex;
+    }
+
+    #seccion_registrar .cajaTabla .caja-registrar form {
+        padding: 30px 25px;
+    }
+
+    #seccion_registrar .cajaTabla .caja-registrar .hero {
+        width: 50%;
+        border-radius: 0;
+    }
+
+    #seccion_registrar .cajaTabla .caja-registrar form .caja-buttons button {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #iniciar_sesion .contenedor {
+        padding: 0 30px;
+    }
+
+    #iniciar_sesion h1 {
+        font-size: 35px;
+        line-height: 45px;
+        margin-bottom: 1rem;
+    }
+
+    #iniciar_sesion h2.subtitulo {
+        font-size: 20px;
+        line-height: 35px;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #seccion_registrar .cajaTabla .caja-registrar {
+        width: 500px;
+        margin: auto;
+    }
+
+    #seccion_registrar .cajaTabla {
+        display: flex;
+    }
+
+    #seccion_registrar .cajaTabla .caja-registrar form {
+        padding: 30px 25px;
+        width: 100%;
+    }
+
+    #seccion_registrar .cajaTabla .caja-registrar .hero {
+        display: none;
+    }
+
+    #seccion_registrar .cajaTabla .caja-registrar form .caja-buttons button {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #seccion_tabla main {
+        position: relative;
+        flex-direction: column;
+    }
+
+    #seccion_tabla .cajaAside.noClick {
+        padding: 0;
+    }
+
+    #seccion_tabla .cajaAside.click {
+        max-width: 690px;
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #seccion_tabla .cajaAside.noClick .caja-menu{
+        display: none;
+    }
+
+    #seccion_tabla .cajaAside.click .caja-menu{
+        display: block;
+        width: 90%;
+    }
+
+    #seccion_tabla .cajaAside.click .logotipoAside {
+        margin-top: 40px;
+        width: 350px;
+        height: 50px;
+    }
+
+    #seccion_tabla .cajaAside.noClick {
+        background: var(--darkBlue1);
+        border-radius: 50%;
+        max-width: 80px;
+        width: 100%;
+        height: 50px;
+    }
+
+    #seccion_tabla .cajaAside.noClick #button_menu {
+        background: var(--white);
+        max-width: 80px;
+        width: 100%;
+        height: 60px;
+    }
+
+    #seccion_tabla .cajaAside #button_menu {
+        background-color: transparent;
+        border: none;
+        width: 50px;
+        padding: 0;
+        border-radius: 0;
+        pointer-events: all;
+    }
+
+    #seccion_tabla .banner {
+        top: -40px;
+    }
+
+    #seccion_tabla #tablaDatos_wrapper {
+        margin-top: 40px;
+    }
+
+    #seccion_tabla #tablaDatos_wrapper .dt-layout-cell {
+        overflow-x: scroll;
+    }
+
+    #seccion_registrar main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #seccion_registrar .cajaTabla .caja-registrar form label .icon-input {
+        height: 50px;
+    }
+
+    #seccion_registrar .cajaTabla .caja-registrar form label .icon-input input[type="text"], #seccion_registrar .cajaTabla .caja-registrar form label .icon-input input[type="email"], #seccion_registrar .cajaTabla .caja-registrar form label .icon-input input[type="password"] {
+        font-size: 18px;
+    }
+
+    #seccion_registrar .cajaAside {
+        display: none;
+    }
+
+    #seccion_registrar .nav-movil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0 20px;
+    }
+
+    #seccion_registrar .footer-movil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        background-color: var(--darkBlue1);
+        padding: 30px 0;
+    }
+
+    #seccion_registrar .footer-movil .redes-sociales {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #seccion_registrar .footer-movil .redes-sociales img{
+        width: 35px;
+    }
+
+    #seccion_registrar .cajaTabla .caja-registrar form .caja-buttons button {
+        width: 100%;
+    }
+
+    #seccion_registrar .cajaTabla .caja-registrar {
+        margin-bottom: 40px;
+    }
 }

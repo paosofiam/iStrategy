@@ -70,5 +70,12 @@ function getAll(){
         .done(function( response ) {
             console.log(response);
             printUsers(response);
-        });
+            let table = new DataTable('#tablaDatos');
+            
+        })
+            /* .then(function loadTables(){//Datatables starts my table only after the table has been loaded into the HTML
+                $(document).ready( function () {//starts the functionality of my table
+                    $('#tablaDatos').DataTable();
+                } );
+            }) */
 }
