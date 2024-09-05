@@ -192,6 +192,7 @@
                     <input type="checkbox" class="mycheck" name="" id="login-remember">
                     <span>Recuérdame</span>
                 </label>
+                <span id="login-warning" class="red-txt"></span>
                 <button type="button" class="mb-3 mt-4 gap-3" onclick="readLogin()">Iniciar Sesión</button>
             </form>
             </div>

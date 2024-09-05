@@ -10,6 +10,9 @@ function login(data){
             if(response.login){
                 window.location.reload();
             }
+            else{
+                document.getElementById('login-warning').innerHTML = response.message;
+            }
         });
 }
 

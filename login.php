@@ -17,7 +17,7 @@ if($_POST['info']){
     if($responseDB){
         if($_POST['info']['password'] === $responseDB['password']){
             //session start
-            $response['message'] = "Welcome";
+            $response['message'] = "Bienvenido(a) ".$responseDB['username'];
             $response['login'] = true;
             $_SESSION['id'] = $responseDB['ID'];
             $_SESSION['email'] = $responseDB['email'];
@@ -25,13 +25,13 @@ if($_POST['info']){
         }
         else{
             //code if password is incorrect
-            $response['message'] = "Error: Password Incorrect";
+            $response['message'] = "Contraseña incorrecta";
             $response['found'] = $responseDB;
         }
     }
     else{
         //code if there are no results
-        $response['message'] = "User not found";
+        $response['message'] = "Usuario incorrecto";
     }
 }
 
