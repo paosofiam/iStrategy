@@ -2,6 +2,8 @@
 
 require_once "app/controller.php";
 
+session_start();
+
 $_POST = json_decode(file_get_contents('php://input'),true);
 
 $response = array(
@@ -16,6 +18,9 @@ if($_POST['info']){
         if($_POST['info']['password'] === $responseDB['password']){
             //session start
             $response['message'] = "Welcome";
+            $_SESSION['id'] = $responseDB['ID'];
+            $_SESSION['email'] = $responseDB['email'];
+            $_SESSION['username'] = $responseDB['username'];
         }
         else{
             //code if password is incorrect

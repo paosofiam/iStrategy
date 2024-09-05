@@ -107,9 +107,9 @@ function readForm(id){
 }
 
 function readLogin(){
-    var email = readInput('form-input-email',true);
-    var password = readInput('form-input-password1',true);
-    var remember = readCheckbox('form-input-remember',false);
+    var email = readInput('login-username',true);
+    var password = readInput('login-password',true);
+    var remember = readCheckbox('login-remember',false);
     var data = {
         'email' : email,
         'password' : password,

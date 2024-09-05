@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +13,8 @@
     <link rel="shortcut icon" type="image/svg" href="assets/img/icons/iso/paper-plane.png" sizes="16x16">
     <title>
         <?php 
-        if(true){
-            echo "Inicio";
+        if(isset($_SESSION['id'])){
+            echo "Bienvenido(a) ".$_SESSION['username'];
         }
         else{
             echo "Inicio de Sesión";
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="//cdn.datatables.net/2.1.5/css/dataTables.dataTables.min.css">
 </head>
 <body>
-    <?php if (true) : ?>
+    <?php if (isset($_SESSION['id'])) : ?>
             <div id="seccion_tabla" class="blue-bg" >
                 <main>
                     <aside class="cajaAside noClick">
@@ -44,7 +44,7 @@
                                 <li>EJEMPLO 3</li>
                             </ul>
                             <hr>
-                            <button type="button" onclick="">+ Crear nueva etiqueta</button>
+                            <button type="button" onclick="window.location.href = 'logout.php';">Cerrar Sesión</button>
                         </div>
                     </aside>
                     <div class="cajaTabla">
@@ -137,7 +137,7 @@
                                 </div>
                             </form>
                             <div class="hero">
-                                <img class="hero__bg" src="assets/img/pictures/background/office.png" alt="Background Office">
+                                <img class="hero__bg" src="assets/img/pictures/background/office.jpg" alt="Background Office">
                                 <img class="hero__fg" src="assets/img/icons/logo/logo-istrategy-light.png" alt="iStrategy Logo">
                             </div>
                         </div>
@@ -159,20 +159,20 @@
                 <h1 class="blue-txt">Iniciar sesión</h1>
                 <h2 class="subtitulo black-txt">Ingresa tus datos a continuación</h2>
             </center>
-            <form action="">
-                <label for="">
+            <form action="" class="container" style="position: relative;">
+                <label for="" class="flx-col-s-c w-100 mb-3">
                     <span>Correo Electrónico</span>
-                    <input type="email" name="" id="login-username" placeholder="Ingrese el Correo" class="blue-bg">
+                    <input type="email" autocomplete="email" name="" id="login-username" placeholder="Ingrese el Correo" class="blue-bg">
                 </label>
-                <label for="">
+                <label for="" class="flx-col-s-c w-100 mb-3">
                     <span>Contraseña</span>
                     <input type="password" name="" id="login-password" placeholder="Introduzca Contraseña" class="blue-bg">
                 </label>
-                <label for="">
+                <label for="" class="flx-col-s-c w-100 mb-3">
                     <input type="checkbox" class="mycheck" name="" id="login-remember">
                     <span>Mantenme Conectado</span>
                 </label>
-                <button type="button" class="mb-3 mt-4 gap-3" onclick="validateSesion()">Iniciar Sesión</button>
+                <button type="button" class="mb-3 mt-4 gap-3" onclick="readLogin()">Iniciar Sesión</button>
             </form>
             </div>
         </div>
