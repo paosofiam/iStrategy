@@ -6,6 +6,8 @@ let formGenderM = document.getElementById('form-input-genderM');
 let formGenderF = document.getElementById('form-input-genderF');
 let formRemember = document.getElementById('form-input-remember');
 let formSubmit = document.getElementById('form-button-submit');
+let modalDel = document.getElementById('modal-button-delete');
+let modalCancel = document.getElementById('modal-button-cancel');
 /* Print info */
 function printUsers(data){
     var theString = '';
@@ -40,7 +42,8 @@ function clearForm(){
     formGenderM.checked = false;
     formGenderF.checked = false;
     formRemember.checked = false;
-    formSubmit.setAttribute('onclick','readForm(0)')
+    formSubmit.setAttribute('onclick','readForm(0)');
+    modalCancel.setAttribute('onclick','del();');
 }
 /* Interactions */
 function toggleElement(id,display){
@@ -71,5 +74,12 @@ function editForm(id){
 }
 
 function remove(id){
-    del(id);
+    console.log('hey!')
+    modalDel.setAttribute('onclick','del('+id+');');
+    toggleElement('modal-rUSure','flex');
+}
+
+function cancelDel(){
+    modalDel.setAttribute('onclick','del();');
+    toggleElement('modal-rUSure','flex');
 }

@@ -55,7 +55,7 @@ button{
     /* Text Color */
 .black-txt{color: var(--black);}
 .grey-txt{color: var(--grey);}
-.lightGrey-txt{color: var(--lightBlue);}
+.lightGrey-txt{color: var(--lightGrey);}
 .red-txt{color: var(--red);}
 .blue-txt{color: var(--darkBlue1);}
     /* Display */

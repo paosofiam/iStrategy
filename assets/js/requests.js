@@ -7,7 +7,9 @@ function login(data){
     })
         .done(function( response ) {
             console.log(response);
-            window.location.reload();
+            if(response.login){
+                window.location.reload();
+            }
         });
 }
 

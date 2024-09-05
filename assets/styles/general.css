@@ -662,3 +662,28 @@
         margin-bottom: 40px;
     }
 }
+
+#modal-rUSure{
+    height: 100vh;
+    width: 100vw;
+    background: hsla(0, 0%, 0%, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#modal-rUSure div{
+    padding: 20px;
+    background-color: var(--lightGrey);
+    border-radius: 10px;
+}
+
+#modal-rUSure div div{
+    width: 80%;
+}
+
+#modal-rUSure div div button{
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+}

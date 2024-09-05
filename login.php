@@ -18,6 +18,7 @@ if($_POST['info']){
         if($_POST['info']['password'] === $responseDB['password']){
             //session start
             $response['message'] = "Welcome";
+            $response['login'] = true;
             $_SESSION['id'] = $responseDB['ID'];
             $_SESSION['email'] = $responseDB['email'];
             $_SESSION['username'] = $responseDB['username'];

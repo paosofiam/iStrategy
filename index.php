@@ -151,7 +151,27 @@
                     </div>
                 </main>
             </div>
+            <div id="modal-rUSure" class="flx-col-c-c" style="display: none;">
+                <div class="flx-col-c-c">
+                    <span class="blue-txt">¿Estás seguro de eliminar este elemento?</span>
+                    <div class="flx-row-c-sb">
+                        <button id="modal-button-delete" class="red-bg lightGrey-txt" type="button" onclick="del()">Eliminar</button>
+                        <button id="modal-button-cancel" class="blue-bg lightGrey-txt" type="button" onclick="cancelDel()">Cancelar</button>
+                    </div>
+                </div>
+            </div>
     <?php else : ?>
+        <script src="">
+            const savedUser = localStorage.getItem('savedUser');
+            const savedPassword = localStorage.getItem('savedPassword');
+            const savedRemember = localStorage.getItem('savedRemember');
+
+            if(savedUser){
+                document.getElementById('login-username').value = savedUser
+                document.getElementById('login-password').value = savedPassword
+                document.getElementById('login-remember').checked = savedRemember;
+            }
+        </script>
         <div id="iniciar_sesion">
             <div class="contenedor">
             <center>
@@ -176,28 +196,16 @@
             </form>
             </div>
         </div>
-        <script src="">
-            const savedUser = localStorage.getItem('savedUser');
-            const savedPassword = localStorage.getItem('savedPassword');
-            const savedRemember = localStorage.getItem('savedRemember');
-
-            if(savedUser){
-                document.getElementById('login-username').value = savedUser
-                document.getElementById('login-password').value = savedPassword
-                document.getElementById('login-remember').checked = savedRemember;
-            }
-        </script>
     <?php endif; ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="//cdn.datatables.net/2.1.5/js/dataTables.min.js"></script>
     <script src="assets/js/interactions.js"></script>
     <script src="assets/js/requests.js"></script>
     <script src="assets/js/validations.js"></script>
-
-    <script>
-        getAll();
-        
-
+    <?php if (isset($_SESSION['id'])) : ?>
+        <script>getAll();</script>
+    <?php endif; ?>
+    <script>      
         let menuDato = 0;
         /* Menu barra aside tabla y login */
         function menu(event) {
