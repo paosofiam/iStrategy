@@ -2,7 +2,8 @@ function login(data){
     $.ajax({
         method: "POST",
         url: "login.php",
-        data: { info: data }
+        dataType: "JSON",
+        data: JSON.stringify({ info: data })
     })
         .done(function( response ) {
             console.log(response);
@@ -13,7 +14,8 @@ function add(data){
     $.ajax({
         method: "POST",
         url: "agregar_usuario.php",
-        data: { info: data }
+        dataType: "JSON",
+        data: JSON.stringify({ info: data })
     })
         .done(function( response ) {
             console.log(response);
@@ -22,9 +24,10 @@ function add(data){
 
 function del(id){
     $.ajax({
-        method: "DELETE",
+        method: "POST",
         url: "eliminar_usuario.php",
-        data: { ID: id }
+        dataType: "JSON",
+        data: JSON.stringify({ ID: id })
     })
         .done(function( response ) {
             console.log(response);
@@ -32,21 +35,25 @@ function del(id){
 }
 
 function get(id){
+    console.log(id);
     $.ajax({
-        method: "GET",
+        method: "POST",
         url: "obtener_usuario.php",
-        data: { ID: id }
+        dataType: "JSON",
+        data: JSON.stringify({ ID: id })
     })
         .done(function( response ) {
             console.log(response);
+            printForm(response);
         });
 }
 
-function edit(data){
+function edit(data,id){
     $.ajax({
-        method: "PUT",
+        method: "POST",
         url: "editar_usuario.php",
-        data: { info: data }
+        dataType: "JSON",
+        data: JSON.stringify({ info: data, ID: id })
     })
         .done(function( response ) {
             console.log(response);
@@ -55,11 +62,13 @@ function edit(data){
 
 function getAll(){
     $.ajax({
-        method: "GET",
+        method: "POST",
         url: "obtener_usuarios.php",
-        data: { info: "obtener_usuarios" }
+        dataType: "JSON",
+        data: JSON.stringify({ info: "obtener_usuarios" })
     })
         .done(function( response ) {
             console.log(response);
+            printUsers(response);
         });
 }

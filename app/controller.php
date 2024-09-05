@@ -51,16 +51,16 @@ class usersController {
     }
 
     public function destroy($id){//Deletes a specific item
-        $this->connection->beginTransaction();
+        //$this->connection->beginTransaction();
 
         $stmt = $this->connection->prepare("DELETE FROM users WHERE ID=:id");
         $stmt->execute([":id" => $id]);
 
-        $sure = readline("r u sure?");
+        /* $sure = readline("r u sure?");
         if ($sure == "y")
             $this->connection->commit();
         else
-            $this->connection->rollBack();
+            $this->connection->rollBack(); */
     }
 
     public function login($email){//Shows a single item

@@ -46,8 +46,8 @@ function validateEmail(email){
     }
 }
 
-function measurePassword(pass){
-    if(pass.length >= 8){
+function measurePassword(pass,lenght){
+    if(pass.length >= lenght){
         return true;
     }
     else{
@@ -101,8 +101,7 @@ function readForm(id){
             add(data);
         }
         else{
-            data.ID = id;
-            edit(data);
+            edit(data,id);
         }
     }
 }

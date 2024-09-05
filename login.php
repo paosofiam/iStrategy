@@ -4,19 +4,29 @@ require_once "app/controller.php";
 
 $_POST = json_decode(file_get_contents('php://input'),true);
 
+$response = array(
+    'message' => 'Error',
+    'received' => $_POST
+);
+
 if($_POST['info']){
     $users_controller = new usersController();
-    $response = $users_controller->login($_POST['info']['email']);
-    if($response){
-        if($_POST['info']['password'] === $response['password']){
+    $responseDB = $users_controller->login($_POST['info']['email']);
+    if($responseDB){
+        if($_POST['info']['password'] === $responseDB['password']){
             //session start
-            echo json_encode(array('theMessage' => 'success'));
+            $response['message'] = "Welcome";
         }
         else{
             //code if password is incorrect
+            $response['message'] = "Error: Password Incorrect";
+            $response['found'] = $responseDB;
         }
     }
     else{
         //code if there are no results
+        $response['message'] = "User not found";
     }
 }
+
+echo json_encode($response);

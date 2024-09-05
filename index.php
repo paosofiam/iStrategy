@@ -45,7 +45,7 @@
                             <td>ACCIÓN</td>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="dynamic-table">
                         <!-- <tr id="row-table-template">
                             <td>1</td>
                             <td>Juanito Alcachofa</td>
@@ -91,11 +91,11 @@
                 <div>
                     <span>Género</span>
                     <label for="">
-                        <input type="radio" name="form-input-gender" id="" value="Masculino">
+                        <input type="radio" name="form-input-gender" id="form-input-genderM" value="Masculino">
                         <span>Masculino</span>
                     </label>
                     <label for="">
-                        <input type="radio" name="form-input-gender" id="" value="Femenino">
+                        <input type="radio" name="form-input-gender" id="form-input-genderF" value="Femenino">
                         <span>Femenino</span>
                     </label>
                 </div>
@@ -104,8 +104,8 @@
                     <span>Recordarme Siempre</span>
                 </label>
                 <div>
-                    <button type="button" onclick="submit()">Enviar</button>
-                    <button type="button" onclick="cancel()">Cancelar</button>
+                    <button id="form-button-submit" type="button" onclick="submit()">Enviar</button>
+                    <button id="form-button-cancel" type="button" onclick="cancel()">Cancelar</button>
                 </div>
             </form>
             <div class="hero">
@@ -133,6 +133,7 @@
         </form>
     <?php endif; ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/interactions.js"></script>
     <script src="assets/js/requests.js"></script>
     <script src="assets/js/validations.js"></script>
 </body>

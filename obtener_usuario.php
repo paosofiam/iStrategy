@@ -2,10 +2,16 @@
 
 require_once "app/controller.php";
 
-$_GET = json_decode(file_get_contents('php://input'),true);
+$_POST = json_decode(file_get_contents('php://input'),true);
 
-if($_GET['ID']){
+$response = array(
+    'message' => 'Error',
+    'received' => $_POST
+);
+
+if($_POST['ID']){
     $users_controller = new usersController();
-    $response = $users_controller->show($_GET['ID']);
-    echo json_encode($response);
+    $response = $users_controller->show($_POST['ID']);
 }
+
+echo json_encode($response);

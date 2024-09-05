@@ -2,9 +2,17 @@
 
 require_once "app/controller.php";
 
-$_DELETE = json_decode(file_get_contents('php://input'),true);
+$_POST = json_decode(file_get_contents('php://input'),true);
 
-if($_DELETE['ID']){
+$response = array(
+    'message' => 'Error',
+    'received' => $_POST
+);
+
+if($_POST['ID']){
     $users_controller = new usersController();
-    $users_controller->destroy($_DELETE['ID']);
+    $users_controller->destroy($_POST['ID']);
+    $response['message'] = "User deleted from DB";
 }
+
+echo json_encode($response);
