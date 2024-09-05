@@ -115,5 +115,16 @@ function readLogin(){
         'password' : password,
         'remember' : remember
     }
+    if(data.remember){
+        localStorage.setItem('savedUser',data.email);
+        localStorage.setItem('savedPassword',data.password);
+        localStorage.setItem('savedRemember',data.remember);
+    }
+    else{
+        localStorage.removeItem('savedUser');
+        localStorage.removeItem('savedPassword');
+        localStorage.removeItem('savedRemember');
+        //localStorage.clear();
+    }
     login(data);
 }

@@ -88,46 +88,46 @@
                     <div class="cajaTabla">
                         <div class="caja-registrar">
                             <form class="" action="">
-                                <label for="">
+                                <label for="form-input-username">
                                     <span>Nombre de Usuario</span>
                                     <div class="icon-input">
                                         <img src="assets/img/icons/ui/user.png" alt="">
-                                        <input type="text" name="" id="form-input-username" placeholder="Ingrese su Nombre de Usuario">
+                                        <input type="text" autocomplete="name" name="" id="form-input-username" placeholder="Ingrese su Nombre de Usuario">
                                     </div>
                                 </label>
-                                <label for="">
+                                <label for="form-input-email">
                                     <span>Dirección de Correo</span>
                                     <div class="icon-input">
                                         <img src="assets/img/icons/ui/email.png" alt="">
-                                        <input type="email" name="" id="form-input-email" placeholder="Ingrese su Email">
+                                        <input type="email" autocomplete="email" name="" id="form-input-email" placeholder="Ingrese su Email">
                                     </div>
                                 </label>
-                                <label for="">
+                                <label for="form-input-password1">
                                     <span>Contraseña</span>
                                     <div class="icon-input">
                                         <img src="assets/img/icons/ui/lock1.png" alt="">
-                                        <input type="password" name="" id="form-input-password1" placeholder="Ingrese su Contraseña">
+                                        <input type="password" autocomplete="password" name="" id="form-input-password1" placeholder="Ingrese su Contraseña">
                                     </div>
                                 </label>
-                                <label for="">
+                                <label for="form-input-password2">
                                     <span>Confirmar Contraseña</span>
                                     <div class="icon-input">
                                         <img src="assets/img/icons/ui/lock2.png" alt="">
-                                        <input type="password" name="" id="form-input-password2" placeholder="Ingrese su Contraseña de nuevo">
+                                        <input type="password" autocomplete="nope" name="" id="form-input-password2" placeholder="Ingrese su Contraseña de nuevo">
                                     </div>
                                 </label>
                                 <div class="genero">
                                     <span>Género</span>
-                                    <label for="" class="radio-inputs">
+                                    <label for="form-input-genderM" class="radio-inputs">
                                         <input class="inp-radio" type="radio" name="form-input-gender" id="form-input-genderM" value="Masculino">
                                         <span>Masculino</span>
                                     </label>
-                                    <label for="" class="radio-inputs">
+                                    <label for="form-input-genderF" class="radio-inputs">
                                         <input class="inp-radio" type="radio" name="form-input-gender" id="form-input-genderF" value="Femenino">
                                         <span>Femenino</span>
                                     </label>
                                 </div>
-                                <label for="" class="radio-inputs">
+                                <label for="form-input-remember" class="radio-inputs">
                                     <input  class="inp-radio" type="checkbox" name="" id="form-input-remember">
                                     <span>Recordarme Siempre</span>
                                 </label>
@@ -160,29 +160,39 @@
                 <h2 class="subtitulo black-txt">Ingresa tus datos a continuación</h2>
             </center>
             <form action="" class="container" style="position: relative;">
-                <label for="" class="flx-col-s-c w-100 mb-3">
+                <label for="login-username" class="flx-col-s-c w-100 mb-3">
                     <span>Correo Electrónico</span>
                     <input type="email" autocomplete="email" name="" id="login-username" placeholder="Ingrese el Correo" class="blue-bg">
                 </label>
-                <label for="" class="flx-col-s-c w-100 mb-3">
+                <label for="login-password" class="flx-col-s-c w-100 mb-3">
                     <span>Contraseña</span>
-                    <input type="password" name="" id="login-password" placeholder="Introduzca Contraseña" class="blue-bg">
+                    <input type="password" autocomplete="password" name="" id="login-password" placeholder="Introduzca Contraseña" class="blue-bg">
                 </label>
-                <label for="" class="flx-col-s-c w-100 mb-3">
+                <label for="login-remember" class="flx-col-s-c w-100 mb-3">
                     <input type="checkbox" class="mycheck" name="" id="login-remember">
-                    <span>Mantenme Conectado</span>
+                    <span>Recuérdame</span>
                 </label>
                 <button type="button" class="mb-3 mt-4 gap-3" onclick="readLogin()">Iniciar Sesión</button>
             </form>
             </div>
         </div>
+        <script src="">
+            const savedUser = localStorage.getItem('savedUser');
+            const savedPassword = localStorage.getItem('savedPassword');
+            const savedRemember = localStorage.getItem('savedRemember');
+
+            if(savedUser){
+                document.getElementById('login-username').value = savedUser
+                document.getElementById('login-password').value = savedPassword
+                document.getElementById('login-remember').checked = savedRemember;
+            }
+        </script>
     <?php endif; ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="//cdn.datatables.net/2.1.5/js/dataTables.min.js"></script>
     <script src="assets/js/interactions.js"></script>
     <script src="assets/js/requests.js"></script>
     <script src="assets/js/validations.js"></script>
-   
 
     <script>
         getAll();
